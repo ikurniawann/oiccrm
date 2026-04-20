@@ -85,13 +85,8 @@ export default function DashboardLayout({
                 </span>
               </div>
               <div className="hidden sm:block">
-<<<<<<< HEAD
                 <p className="text-sm font-medium text-white">Bayu</p>
                 <p className="text-xs text-white/70">Manager</p>
-=======
-                <p className="text-sm font-medium text-on_surface">Budi</p>
-                <p className="text-xs text-on-surface-variant">Manager</p>
->>>>>>> ee4121dd25bf623183e5c3422f94c0f98775190e
               </div>
             </div>
 
