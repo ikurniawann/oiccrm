@@ -85,7 +85,7 @@ export default function DashboardLayout({
                 </span>
               </div>
               <div className="hidden sm:block">
-                <p className="text-sm font-medium text-on_surface">Bayu</p>
+                <p className="text-sm font-medium text-on_surface">Budi</p>
                 <p className="text-xs text-on-surface-variant">Manager</p>
               </div>
             </div>
@@ -127,10 +127,9 @@ export default function DashboardLayout({
                   className={`
                     flex items-center gap-3 px-4 py-3 rounded-xl
                     transition-all duration-200
-                    ${
-                      isActive
-                        ? "bg-primary-container text-white font-medium shadow-ambient"
-                        : "text-on-surface-variant hover:bg-surface-container-lowest hover:text-on_surface"
+                    ${isActive
+                      ? "bg-primary-container text-white font-medium shadow-ambient"
+                      : "text-on-surface-variant hover:bg-surface-container-lowest hover:text-on_surface"
                     }
                   `}
                 >
