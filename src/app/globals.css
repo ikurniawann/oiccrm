@@ -104,6 +104,7 @@ body {
 /* Primary CTA gradient */
 .cta-gradient {
   background: linear-gradient(135deg, #090300 0%, #2E1900 100%);
+  color: var(--color-on-primary);
 }
 
 /* Card — no-line rule: tonal elevation only */

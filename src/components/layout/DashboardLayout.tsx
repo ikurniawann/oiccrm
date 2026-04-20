@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, ReactNode } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -35,20 +35,20 @@ const navigation = [
 export default function DashboardLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const pathname = usePathname();
 
   return (
     <div className="min-h-screen bg-surface">
-      {/* Glass Header */}
-      <header className="glass-header fixed top-0 left-0 right-0 z-50 h-18">
+      {/* Header */}
+      <header className="bg-primary fixed top-0 left-0 right-0 z-50 h-18">
         <div className="flex items-center justify-between h-full px-6">
           {/* Mobile menu button */}
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="lg:hidden p-2 -ml-2 rounded-lg hover:bg-surface-container-low transition-colors"
+            className="lg:hidden p-2 -ml-2 rounded-lg hover:bg-white/20 transition-colors text-white"
           >
             {sidebarOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -56,15 +56,15 @@ export default function DashboardLayout({
           {/* Logo - Odilia Infinity */}
           <div className="flex items-center gap-3">
             <div className="hidden sm:block">
-              <h1 className="font-serif text-xl tracking-wide text-primary">
+              <h1 className="font-serif text-xl tracking-wide text-white">
                 Odilia Infinity
               </h1>
-              <p className="text-xs text-on-surface-variant tracking-widest uppercase">
+              <p className="text-xs text-white/70 tracking-widest uppercase">
                 Wellness
               </p>
             </div>
             <div className="sm:hidden">
-              <h1 className="font-serif text-lg tracking-wide text-primary">
+              <h1 className="font-serif text-lg tracking-wide text-white">
                 OI
               </h1>
             </div>
@@ -73,24 +73,24 @@ export default function DashboardLayout({
           {/* Right side */}
           <div className="flex items-center gap-4">
             {/* Outlet Badge */}
-            <span className="hidden md:inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-surface-container-low text-on-surface-variant">
+            <span className="hidden md:inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/20 text-white">
               Annathaya & The Square
             </span>
 
             {/* User */}
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center">
+              <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center">
                 <span className="text-sm font-semibold text-white">
                   B
                 </span>
               </div>
               <div className="hidden sm:block">
-                <p className="text-sm font-medium text-on_surface">Bayu</p>
-                <p className="text-xs text-on-surface-variant">Manager</p>
+                <p className="text-sm font-medium text-white">Bayu</p>
+                <p className="text-xs text-white/70">Manager</p>
               </div>
             </div>
 
-            <button className="p-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface-variant hover:text-on_surface">
+            <button className="p-2 rounded-lg hover:bg-white/20 transition-colors text-white">
               <Settings size={18} />
             </button>
           </div>

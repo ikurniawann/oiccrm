@@ -11,6 +11,7 @@ import {
   Star,
   ArrowUpRight,
   ArrowDownRight,
+  User,
 } from "lucide-react";
 import { dashboardStats, members, bookings } from "@/lib/dummy-data";
 
@@ -153,7 +154,8 @@ export default function DashboardPage() {
 
                 {/* Details */}
                 <div className="flex-1 min-w-0">
-                  <p className="font-medium text-on_surface truncate">
+                  <p className="font-medium text-on_surface truncate flex items-center gap-2">
+                    <User size={16} className="text-primary shrink-0" />
                     {booking.memberName}
                   </p>
                   <p className="text-sm text-on-surface-variant">
